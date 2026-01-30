@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="de.phonebook.tests.HomePageTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2026-01-30T09:06:34.922Z" hostname="0813d2d8-9792-4bf6-b89c-eb14e10ddc4b.fritz.box" time="0.019">
+<testsuite name="de.phonebook.tests.HomePageTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2026-01-30T09:15:39.795Z" hostname="0813d2d8-9792-4bf6-b89c-eb14e10ddc4b.fritz.box" time="0.019">
   <properties/>
-  <testcase name="isHomeComponentPresentTest" classname="de.phonebook.tests.HomePageTests" time="0.005"/>
-  <system-out><![CDATA[10:06:34.928 [Test worker] INFO  de.phonebook.core.TestBase -- Start test isHomeComponentPresentTest with data: []
-10:06:34.942 [Test worker] INFO  de.phonebook.core.TestBase -- PASSED: isHomeComponentPresentTest
-10:06:34.942 [Test worker] INFO  de.phonebook.core.TestBase -- Stop test
-10:06:34.942 [Test worker] INFO  de.phonebook.core.TestBase -- **********************************************************
+  <testcase name="isHomeComponentPresentTest" classname="de.phonebook.tests.HomePageTests" time="0.004"/>
+  <system-out><![CDATA[10:15:39.799 [Test worker] INFO  de.phonebook.core.TestBase -- Start test isHomeComponentPresentTest with data: []
+10:15:39.815 [Test worker] INFO  de.phonebook.core.TestBase -- PASSED: isHomeComponentPresentTest
+10:15:39.816 [Test worker] INFO  de.phonebook.core.TestBase -- Stop test
+10:15:39.816 [Test worker] INFO  de.phonebook.core.TestBase -- **********************************************************
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
