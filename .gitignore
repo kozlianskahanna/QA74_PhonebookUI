@@ -1,18 +1,17 @@
-.gradle
-/gradle/
 /build
-
+/.gradle
+/gradle/
 
 ### IntelliJ IDEA ###
-*.idea
+.idea/
 *.iws
 *.iml
 *.ipr
 out/
+
 settings.gradle
-gradlew.bat
-\gradlew
 gradlew
+gradlew.bat
 
 ### Mac OS ###
 .DS_Store
