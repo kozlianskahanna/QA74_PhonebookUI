@@ -1,12 +1,14 @@
 package de.phonebook.fw;
 
+import de.phonebook.core.BaseHelper;
+import de.phonebook.model.Contact;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 import java.util.List;
 
-public class ContactHelper extends de.phonebook.core.BaseHelper {
+public class ContactHelper extends BaseHelper {
 
     public ContactHelper(WebDriver driver) {
         super(driver);
@@ -16,7 +18,7 @@ public class ContactHelper extends de.phonebook.core.BaseHelper {
         click(By.cssSelector(".add_form__2rsm2 button"));
     }
 
-    public void fillContactForm(de.phonebook.model.Contact contact) {
+    public void fillAddContactForm(Contact contact) {
         type(By.xpath("//input[1]"), contact.getName());
         type(By.xpath("//input[2]"), contact.getLastname());
         type(By.xpath("//input[3]"), contact.getPhone());
@@ -29,15 +31,14 @@ public class ContactHelper extends de.phonebook.core.BaseHelper {
         click(By.cssSelector("[href='/add']"));
     }
 
-    public boolean verifyContactByName(String text) {
-
+    public boolean verifyByName(String text) {
         if (verifyText(text, By.cssSelector("h2"))) return true;
         return false;
     }
 
     public boolean verifyText(String text, By locator) {
         List<WebElement> contacts = driver.findElements(locator);
-        for (WebElement element : contacts) {
+        for (WebElement element: contacts) {
             if (element.getText().contains(text))
                 return true;
         }
@@ -56,8 +57,15 @@ public class ContactHelper extends de.phonebook.core.BaseHelper {
         return 0;
     }
 
-    public boolean verfyByPhone(String text) {
-        if (verifyText(text, By.cssSelector("h3")))return true;
+    public boolean isContactsListEmpty() {
+        return isElementPresent(By.xpath("//*[contains(.,'No Contacts')]"));
+    }
+
+    public boolean verifyByPhone(String text) {
+        if (verifyText(text,By.cssSelector("h3"))) return true;
         return false;
+    }
+
+    public void fillContactForm(Contact contact) {
     }
 }

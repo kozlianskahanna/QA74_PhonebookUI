@@ -2,22 +2,24 @@ package de.phonebook.tests;
 
 import de.phonebook.core.TestBase;
 import de.phonebook.data.UserData;
+import de.phonebook.model.User;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 public class LoginTests extends TestBase {
+
     @BeforeMethod
-    public void ensurePreconditions() {
+    public void ensurePrecondition() {
         if (!app.getUser().isLoginLinkPresent()) {
-            app.getUser().clickOnSingOutButton();
+            app.getUser().clickOnSignOutButton();
         }
     }
 
     @Test
-    public void loginRegisteredUserWithoutEmailPositiveTest() {
+    public void loginRegisteredUserPositiveTest() {
         app.getUser().clickOnLoginLink();
-        app.getUser().fillLoginRegisterForm(new de.phonebook.model.User()
+        app.getUser().fillLoginRegisterForm(new User()
                 .setEmail(UserData.EMAIL)
                 .setPassword(UserData.PASSWORD));
         app.getUser().clickOnLoginButton();
@@ -27,11 +29,10 @@ public class LoginTests extends TestBase {
     @Test
     public void loginRegisteredUserWithoutEmailNegativeTest() {
         app.getUser().clickOnLoginLink();
-        app.getUser().fillLoginRegisterForm(new de.phonebook.model.User()
+        app.getUser().fillLoginRegisterForm(new User()
                 .setPassword(UserData.PASSWORD));
         app.getUser().clickOnLoginButton();
         Assert.assertTrue(app.getUser().isAlertPresent());
     }
 
 }
-

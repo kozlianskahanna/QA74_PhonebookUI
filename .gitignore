@@ -1,5 +1,4 @@
-/build
-/.gradle
+.gradle
 /gradle/
 
 ### IntelliJ IDEA ###
@@ -10,8 +9,9 @@
 out/
 
 settings.gradle
-gradlew
 gradlew.bat
+/gradlew
+gradlew
 
 ### Mac OS ###
 .DS_Store

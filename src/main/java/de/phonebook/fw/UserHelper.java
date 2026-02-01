@@ -37,4 +37,7 @@ public class UserHelper extends de.phonebook.core.BaseHelper {
     public void clickOnSingOutButton() {
         click(By.xpath("//button[.='Sign Out']"));
     }
+
+    public void clickOnSignOutButton() {
+    }
 }
